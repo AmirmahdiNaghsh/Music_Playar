@@ -88,4 +88,8 @@ public:
         }
     }
 
+    bool login(const string& u, const string& p) {
+        return (u == username && p == password);
+    }
+
 };
