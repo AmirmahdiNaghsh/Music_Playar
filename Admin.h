@@ -88,7 +88,6 @@ public:
         }
     }
 
-
     bool login(const string& u, const string& p) {
         return (u == username && p == password);
     }
@@ -104,6 +103,7 @@ public:
             systemPlaylists[systemPlaylistcount++] = Playlist(name);
         }
     }
+
     void addSongToPlaylist(const string& playlistName, const Song& song) {
         for (int i = 0; i < systemPlaylistcount; ++i) {
             if (systemPlaylists[i].name == playlistName) {
@@ -112,6 +112,7 @@ public:
             }
         }
     }
+
     void removeSongFromPlaylist(const string& playlistName, const string& title) {
         for (int i = 0; i < systemPlaylistcount; ++i) {
             if (systemPlaylists[i].name == playlistName) {
@@ -120,11 +121,13 @@ public:
             }
         }
     }
+
     void createArtistProfile(const string& artistName) {
         if (systemArtistcount < MAX_ARTISTS) {
             systemArtists[systemArtistcount++] = Artist(artistName);
         }
     }
+
     void addSongToArtist(const string& artistName, const Song& song) {
         for (int i = 0; i < systemArtistcount; ++i) {
             if (systemArtists[i].getName() == artistName) {
