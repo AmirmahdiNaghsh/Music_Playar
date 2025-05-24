@@ -52,6 +52,12 @@ public:
         }
     }
 
-    
+    void filterSongsByYear(int year) {
+        for (int i = 0; i < systemSongcount; ++i) {
+            if (systemSongs[i].year == year) {
+                systemSongs[i].display();
+            }
+        }
+    }
 
 };
