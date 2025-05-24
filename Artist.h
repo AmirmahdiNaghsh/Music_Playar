@@ -36,4 +36,9 @@ public:
             songs[i].display();
         }
     }
+
+    string getName() const {
+        return name;
+    }
+    
 };
