@@ -36,5 +36,10 @@ public:
     void toggleLooping() {
         islooping = !islooping;
     }
-    
+
+    void playNextSong() {
+        if (songcount == 0) {
+            cout << "Playlist khali ast.\n";
+            return;
+        }
 };
