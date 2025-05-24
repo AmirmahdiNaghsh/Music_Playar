@@ -69,4 +69,14 @@ public:
         }
     }
 
+    void displayArtist(const string& artistName) {
+        for (int i = 0; i < systemArtistcount; ++i) {
+            if (systemArtists[i].getName() == artistName) {
+                systemArtists[i].display();
+                return;
+            }
+        }
+        cout << "Chah Chah Zan Yaft Nashod.\n";
+    }
+
 };
