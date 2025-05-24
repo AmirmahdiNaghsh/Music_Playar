@@ -102,4 +102,22 @@ public:
         }
     }
 
+    void addFavoritePlaylist(const string& playlistname) {
+        if (favoritePlaylistCount < MAX_PLAYLISTS) {
+            favoritePlaylistNames[favoritePlaylistCount++] = playlistname;
+        }
+    }
+
+    void removeFavoritePlaylist(const string& playlistname) {
+        for (int i = 0; i < favoritePlaylistCount; ++i) {
+            if (favoritePlaylistNames[i] == playlistname) {
+                for (int j = i; j < favoritePlaylistCount - 1; ++j) {
+                    favoritePlaylistNames[j] = favoritePlaylistNames[j + 1];
+                }
+                --favoritePlaylistCount;
+                break;
+            }
+        }
+    }
+
 };
