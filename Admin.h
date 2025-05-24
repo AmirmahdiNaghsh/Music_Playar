@@ -92,4 +92,10 @@ public:
         return (u == username && p == password);
     }
 
+    void addSongToSystem(const Song& song) {
+        if (systemSongcount < MAX_SONGS) {
+            systemSongs[systemSongcount++] = song;
+        }
+    }
+
 };
