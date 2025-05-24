@@ -38,6 +38,7 @@ public:
             savedSongs[savedcount++] = song;
         }
     }
+
     void unsaveSong(const string& title) {
         for (int i = 0; i < savedcount; ++i) {
             if (savedSongs[i].title == title) {
@@ -54,6 +55,7 @@ public:
         if (favoritecount < MAX_SONGS)
             favoriteSongs[favoritecount++] = song;
     }
+
     void removeFavoriteSong(const string& title) {
         for (int i = 0; i < favoritecount; ++i) {
             if (favoriteSongs[i].title == title) {
@@ -64,6 +66,7 @@ public:
             }
         }
     }
+
     void createPlaylist(const string& name) {
         if (personalCount < MAX_PLAYLISTS)
             personalPlaylists[personalCount++] = Playlist(name);
@@ -116,4 +119,5 @@ public:
             }
         }
     }
+
 };
