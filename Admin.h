@@ -128,4 +128,12 @@ public:
         }
     }
 
+    void addSongToArtist(const string& artistName, const Song& song) {
+        for (int i = 0; i < systemArtistcount; ++i) {
+            if (systemArtists[i].getName() == artistName) {
+                systemArtists[i].addSong(song);
+                return;
+            }
+        }
+    }
 };
