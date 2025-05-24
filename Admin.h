@@ -122,4 +122,10 @@ public:
         }
     }
 
+    void createArtistProfile(const string& artistName) {
+        if (systemArtistcount < MAX_ARTISTS) {
+            systemArtists[systemArtistcount++] = Artist(artistName);
+        }
+    }
+
 };
