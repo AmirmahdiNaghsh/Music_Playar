@@ -42,4 +42,24 @@ public:
             cout << "Playlist khali ast.\n";
             return;
         }
+
+        if (mode == TARTIBI) {
+            Songs[currentIndex].display();
+            currentIndex++;
+        }
+        else if (mode == TASADOFI) {
+            int randIndex = rand() % songcount;
+            Songs[randIndex].display();
+        }
+        else if (mode == TEKRAR) {
+            Songs[currentIndex].display();
+        }
+
+        if (currentIndex >= songcount) {
+            if (islooping)
+                currentIndex = 0;
+            else
+                currentIndex = songcount - 1;
+        }
+    }
 };
