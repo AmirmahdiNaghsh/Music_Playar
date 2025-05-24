@@ -66,7 +66,7 @@ public:
             }
         }
     }
-    
+
     void createPlaylist(const string& name) {
         if (personalCount < MAX_PLAYLISTS)
             personalPlaylists[personalCount++] = Playlist(name);
@@ -79,6 +79,24 @@ public:
                     personalPlaylists[j] = personalPlaylists[j + 1];
                 }
                 personalCount--;
+                break;
+            }
+        }
+    }
+
+    void addSongToPlaylist(const string& playlistName, const Song& song) {
+        for (int i = 0; i < personalCount; ++i) {
+            if (personalPlaylists[i].name == playlistName) {
+                personalPlaylists[i].addSong(song);
+                break;
+            }
+        }
+    }
+
+    void removeSongFromPlaylist(const string& playlistName, const string& title) {
+        for (int i = 0; i < personalCount; ++i) {
+            if (personalPlaylists[i].name == playlistName) {
+                personalPlaylists[i].removeSong(title);
                 break;
             }
         }
