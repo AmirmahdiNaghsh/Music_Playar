@@ -60,4 +60,13 @@ public:
         }
     }
 
+    void editArtistName(const string& oldName, const string& newName) {
+        for (int i = 0; i < systemArtistcount; ++i) {
+            if (systemArtists[i].getName() == oldName) {
+                systemArtists[i].setName(newName);
+                return;
+            }
+        }
+    }
+
 };
