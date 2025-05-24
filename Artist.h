@@ -23,8 +23,17 @@ public:
     void setName(const string& newName) {
         name = newName;
     }
-    
+
        void setAlbumCount(int count) {
         albumCount = count;
+    }
+
+    void display() const {
+        cout << "Esm Chah Chah Zan: " << name << endl;
+        cout << "Album ha: " << albumCount << endl;
+        cout << "Ahang haye montasher shodeh: " << songcount << endl;
+        for (int i = 0; i < songcount; ++i) {
+            songs[i].display();
+        }
     }
 };
