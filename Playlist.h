@@ -62,4 +62,13 @@ public:
                 currentIndex = songcount - 1;
         }
     }
+
+    void display() const {
+        cout << "Esm Play List: " << name << endl;
+        cout << "Tedad Ahang: " << songcount << endl;
+        for (int i = 0; i < songcount; ++i) {
+            Songs[i].display();
+        }
+    }
+    
 };
