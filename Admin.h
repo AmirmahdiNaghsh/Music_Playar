@@ -97,5 +97,11 @@ public:
             systemSongs[systemSongcount++] = song;
         }
     }
+    
+    void createPlaylist(const string& name) {
+        if (systemPlaylistcount < MAX_PLAYLISTS) {
+            systemPlaylists[systemPlaylistcount++] = Playlist(name);
+        }
+    }
 
 };
