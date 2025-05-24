@@ -38,5 +38,17 @@ public:
             savedSongs[savedcount++] = song;
         }
     }
+
+    void unsaveSong(const string& title) {
+        for (int i = 0; i < savedcount; ++i) {
+            if (savedSongs[i].title == title) {
+                for (int j = i; j < savedcount - 1; ++j) {
+                    savedSongs[j] = savedSongs[j + 1];
+                }
+                --savedcount;
+                break;
+            }
+        }
+    }
     
 };
