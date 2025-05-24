@@ -35,4 +35,13 @@ public:
         }
         cout << "Ahang-ha be surat abc moratab shodand.\n";
     }
+
+    void filterSongsByArtist(const string& artistName) {
+        for (int i = 0; i < systemSongcount; ++i) {
+            if (systemSongs[i].artist == artistName) {
+                systemSongs[i].display();
+            }
+        }
+    }
+    
 };
