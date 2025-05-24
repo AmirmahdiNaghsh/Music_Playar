@@ -28,5 +28,7 @@ public:
     User() {}
     User(string u, string p) : username(u), password(p) {}
 
-    
+    bool checkLogin(const string& u, const string& p) {
+        return (username == u && password == p);
+    }
 };
