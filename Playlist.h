@@ -71,4 +71,10 @@ public:
         }
     }
     
+    void addSong(const Song& song) {
+        if (songcount < MAX_SONGS_PER_PLAYLIST) {
+            Songs[songcount++] = song;
+        }
+    }
+
 };
