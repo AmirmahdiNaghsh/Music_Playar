@@ -41,4 +41,10 @@ public:
         return name;
     }
     
+    void addSong(const Song& song) {
+        if (songcount < MAX_SONGS) {
+            songs[songcount++] = song;
+        }
+    }
+
 };
