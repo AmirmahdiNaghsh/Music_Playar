@@ -112,5 +112,14 @@ public:
             }
         }
     }
-    
+
+    void removeSongFromPlaylist(const string& playlistName, const string& title) {
+        for (int i = 0; i < systemPlaylistcount; ++i) {
+            if (systemPlaylists[i].name == playlistName) {
+                systemPlaylists[i].removeSong(title);
+                return;
+            }
+        }
+    }
+
 };
