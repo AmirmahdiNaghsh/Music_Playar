@@ -79,4 +79,13 @@ public:
         cout << "Chah Chah Zan Yaft Nashod.\n";
     }
 
+    void setArtistAlbumCount(const string& artistName, int count) {
+        for (int i = 0; i < systemArtistcount; ++i) {
+            if (systemArtists[i].getName() == artistName) {
+                systemArtists[i].setAlbumCount(count);
+                return;
+            }
+        }
+    }
+
 };
