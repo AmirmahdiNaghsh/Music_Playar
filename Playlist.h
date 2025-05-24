@@ -70,10 +70,22 @@ public:
             Songs[i].display();
         }
     }
-    
+
     void addSong(const Song& song) {
         if (songcount < MAX_SONGS_PER_PLAYLIST) {
             Songs[songcount++] = song;
+        }
+    }
+
+    void removeSong(const string& title) {
+        for (int i = 0; i < songcount; ++i) {
+            if (Songs[i].title == title) {
+                for (int j = i; j < songcount - 1; ++j) {
+                    Songs[j] = Songs[j + 1];
+                }
+                --songcount;
+                break;
+            }
         }
     }
 
