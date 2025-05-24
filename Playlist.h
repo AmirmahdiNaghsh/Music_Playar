@@ -32,5 +32,9 @@ public:
     void setPlayMode(PlayMode m) {
         mode = m;
     }
+
+    void toggleLooping() {
+        islooping = !islooping;
+    }
     
 };
