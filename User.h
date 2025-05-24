@@ -31,4 +31,12 @@ public:
     bool checkLogin(const string& u, const string& p) {
         return (username == u && password == p);
     }
+
+    void saveSong(const Song& song) {
+        if (savedcount < MAX_SONGS)
+        {
+            savedSongs[savedcount++] = song;
+        }
+    }
+    
 };
