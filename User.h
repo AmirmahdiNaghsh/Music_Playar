@@ -50,5 +50,21 @@ public:
             }
         }
     }
+
+    void addFavoriteSong(const Song& song) {
+        if (favoritecount < MAX_SONGS)
+            favoriteSongs[favoritecount++] = song;
+    }
     
+    void removeFavoriteSong(const string& title) {
+        for (int i = 0; i < favoritecount; ++i) {
+            if (favoriteSongs[i].title == title) {
+                for (int j = i; j < favoritecount - 1; ++j)
+                    favoriteSongs[j] = favoriteSongs[j + 1];
+                favoritecount--;
+                break;
+            }
+        }
+    }
+
 };
