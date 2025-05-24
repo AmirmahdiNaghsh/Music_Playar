@@ -43,5 +43,15 @@ public:
             }
         }
     }
+
+    void filterSongsByGenre(const string& genre) {
+        for (int i = 0; i < systemSongcount; ++i) {
+            if (systemSongs[i].genre == genre) {
+                systemSongs[i].display();
+            }
+        }
+    }
+
     
+
 };
