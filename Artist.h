@@ -24,7 +24,7 @@ public:
         name = newName;
     }
 
-    void setAlbumCount(int count) {
+       void setAlbumCount(int count) {
         albumCount = count;
     }
 
@@ -52,4 +52,5 @@ public:
             playlists[playlistcount++] = playlist;
         }
     }
+    
 };
