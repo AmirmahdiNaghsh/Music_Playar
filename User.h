@@ -55,13 +55,30 @@ public:
         if (favoritecount < MAX_SONGS)
             favoriteSongs[favoritecount++] = song;
     }
-    
+
     void removeFavoriteSong(const string& title) {
         for (int i = 0; i < favoritecount; ++i) {
             if (favoriteSongs[i].title == title) {
                 for (int j = i; j < favoritecount - 1; ++j)
                     favoriteSongs[j] = favoriteSongs[j + 1];
                 favoritecount--;
+                break;
+            }
+        }
+    }
+    
+    void createPlaylist(const string& name) {
+        if (personalCount < MAX_PLAYLISTS)
+            personalPlaylists[personalCount++] = Playlist(name);
+    }
+
+    void deletePlaylist(const string& name) {
+        for (int i = 0; i < personalCount; ++i) {
+            if (personalPlaylists[i].name == name) {
+                for (int j = i; j < personalCount - 1; ++j) {
+                    personalPlaylists[j] = personalPlaylists[j + 1];
+                }
+                personalCount--;
                 break;
             }
         }
