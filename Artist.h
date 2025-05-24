@@ -19,9 +19,12 @@ private:
 public:
     Artist() {}
     Artist(string n) : name(n) {}
-    
+
     void setName(const string& newName) {
         name = newName;
     }
-   
+    
+       void setAlbumCount(int count) {
+        albumCount = count;
+    }
 };
