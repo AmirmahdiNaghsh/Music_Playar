@@ -97,11 +97,20 @@ public:
             systemSongs[systemSongcount++] = song;
         }
     }
-    
+
     void createPlaylist(const string& name) {
         if (systemPlaylistcount < MAX_PLAYLISTS) {
             systemPlaylists[systemPlaylistcount++] = Playlist(name);
         }
     }
 
+    void addSongToPlaylist(const string& playlistName, const Song& song) {
+        for (int i = 0; i < systemPlaylistcount; ++i) {
+            if (systemPlaylists[i].name == playlistName) {
+                systemPlaylists[i].addSong(song);
+                return;
+            }
+        }
+    }
+    
 };
