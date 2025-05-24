@@ -40,11 +40,17 @@ public:
     string getName() const {
         return name;
     }
-    
+
     void addSong(const Song& song) {
         if (songcount < MAX_SONGS) {
             songs[songcount++] = song;
         }
     }
 
+    void addPlaylist(const Playlist& playlist) {
+        if (playlistcount < MAX_PLAYLISTS) {
+            playlists[playlistcount++] = playlist;
+        }
+    }
+    
 };
